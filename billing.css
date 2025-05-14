@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: rgb(245, 229, 229);
+}
+
+.whole-container {
+  height: 100vh;
+  /* background-color: rgba(219, 21, 21, 0.1); */
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  /* height: 35%; Set a fixed reduced height as needed */
+  overflow: hidden;
+}
+
+.form-section {
+  background-color: rgb(248, 225, 225);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  flex: 1; /* Makes both form sections take equal width */
+}
+.form-section1 {
+  /* background-color:  rgb(238, 223, 223); */
+  background-color: rgb(248, 225, 225);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  height: 200px; /* Match parent height */
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+  /* width: 100%; */
+  flex: 1; /* Distribute height equally if needed */
+}
+
+.form-row label {
+  width: 120px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-row input[type="text"],
+.form-row input[type="date"] {
+  flex: 1; /* Take remaining space */
+
+  padding-left: 8px;
+  margin-left: 0px; /* Optional spacing between label and input */
+}
+
+.form-row .small-label {
+  width: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.form-row .small-input {
+  width: 100px;
+  padding: 5px;
+  /* margin-bottom: 20px; */
+}
+.form-section2 {
+  height: 737px;
+  width: 20%;
+  /* background-color:  rgb(238, 223, 223); */
+  background-color: rgba(252, 184, 184, 0.63);
+  /* min-height: 100vh; */
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 3px;
+}
+
+.form-section2-innerbutton {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1; /* makes both divs take equal space */
+  /* margin-top: 10px; */
+  margin-right: 20px;
+}
+.form-section2-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.ver-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ver-row label {
+  width: 80px; /* Adjust based on label length */
+  font-weight: 500;
+}
+
+.ver-row input {
+  flex: 0; /* Makes input fill the remaining space */
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.centered-text {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.form-section2-innerbutton button {
+  width: 90%;
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.radio-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  background-color: rgb(245, 229, 229);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+.ptag {
+  font-weight: bold;
+  margin-left: 150px;
+}
+.text {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%; /* make it full width */
+  flex-wrap: nowrap; /* keeps everything in one row */
+  overflow-x: auto; /* prevent overflow breaking */
+}
+
+.text1 {
+  width: 290px;
+  height: 50px;
+  background-color: rgb(56, 171, 220);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 8px;
+  gap: 5px;
+  flex-shrink: 0; /* prevent shrinking */
+}
+
+.text1 label {
+  color: white;
+  font-weight: bold;
+  padding: 8px;
+  margin: 0 auto;
+}
+
+.text1 input {
+  padding: 5px;
+  width: 50px;
+  margin: 0 auto;
+}
+
+.form-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.formsec {
+  background-color: rgb(238, 223, 223);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 40px;
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.form-pair {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-pair label {
+  font-weight: bold;
+}
+
+.form-pair input {
+  width: 50px;
+  padding: 5px;
+}
+
+.button-pair {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button-pair button {
+  padding: 8px 10px;
+  background-color: skyblue;
+  border-radius: 8px;
+  border: none;
+}
+.table-design {
+  background-color: rgb(238, 238, 238);
+
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%;
+
+  margin-top: 5px;
+  overflow-x: auto; /* prevent overflow breaking */
+  flex-wrap: nowrap; /* keeps everything in one row */
+}
+table {
+  width: 100%;
+  /* border-collapse: collapse; */
+}
+.highlighted-row {
+  box-shadow: 4px 4px 12px rgba(227, 220, 220, 0.5); /* Stronger 3D shadow */
+  transform: translateY(-2px); /* Slight upward lift */
+  z-index: 1; /* Stay above other rows */
+  position: relative; /* Required for z-index to apply */
+}
+.highlighted-row td {
+  border: 2px solid #f9f9f9; /* Clear border for 3D boundary */
+  /* padding: 10px; */
+  background-color: #f9f9f9;
+}
+.scroll-area {
+  width: 79%;
+  border: 2px solid #333; /* Border around the whole table container */
+  height: 170px; /* Set a fixed height for scrolling */
+  overflow: auto; /* Enables scroll bar */
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow-x: auto; /* enables horizontal scroll */
+  white-space: nowrap; /* prevents wrapping */
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: nowrap;
+  min-width: max-content; /* Forces content to stretch beyond container if needed */
+}
+
+.row p {
+  margin: 0;
+  padding: 5px;
+  font-weight: bold;
+  white-space: nowrap; /* prevent text wrapping */
+}
+
+.main-row {
+  display: flex;
+  gap: 10px;
+  width: 79.5%;
+  padding: 5px;
+}
+.vertical {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 15px;
+  background-color: rgb(149, 212, 219);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 20%;
+}
+.vertics {
+  display: flex;
+  /* flex-direction: row; */
+  /* align-items: flex-start; */
+  justify-content: space-evenly;
+  gap: 10px;
+  padding: 15px;
+  background-color: rgb(149, 212, 219);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+.verti {
+  /* display: flex; */
+  /* margin-left: 50px; */
+  /* flex-direction: column; */
+  /* gap: 5px; */
+}
+.vertics input,
+.vertical input {
+  width: 50%;
+  padding: 5px;
+}
+
+.finalrow {
+  height: 30px; /* height of the row */
+  width: 79.5%; /* content width */
+  background-color: rgb(238, 223, 223);
+  margin-right: 30px;
+  margin-left: 5px;
+  margin-top: 10px;
+
+  border-radius: 4px; /* optional: to round corners slightly */
+}
+.checkbox {
+  height: 70px; /* height of the row */
+  display: flex; /* Enable Flexbox */
+  justify-content: space-between; /* Distribute space evenly */
+  align-items: center; /* Align items vertically in the center */
+  padding: 15px; /* Add padding for spacing */
+  background-color: rgb(238, 223, 223); /* Light gray background */
+  box-sizing: border-box; /* Include padding in width */
+}
+.check {
+  display: flex; /* Enable Flexbox for checkboxes */
+  gap: 10px;
+  /* justify-content: space-between; */
+  margin-right: 70px;
+}
+.form-group {
+  display: flex;
+  flex-direction: row; /* Stack label and input vertically */
+  flex: 1; /* Allow form groups to grow equally */
+  margin-left: 40px;
+  justify-content: space-between;
+}
+.form-group input {
+  width: 80%;
+}
+
+th,
+td,
+tr,
+table {
+  /* border: 1px solid black; */
+}
+
+table input[type="text"] {
+  width: 100%;
+  border: none;
+  background: transparent;
+  /* padding: 6px; */
+  font-size: 14px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background-color: #f0f8ff;
+}
+
+.highlighted-row:hover {
+  background-color: #f9f9f9;
+}
+
+.yellow-bg {
+  background-color: #fffecb !important;
+}
+
+.green-bg {
+  background-color: #d1f7d1 !important;
+}
+
+.blue-bg {
+  background-color: #d1e8ff !important;
+}

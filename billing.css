@@ -8,7 +8,8 @@ html,
 body {
   height: 100%;
   font-family: Arial, sans-serif;
-  background-color: rgb(245, 229, 229);
+  background-color: rgb(220, 239, 248);
+  /* background-color: gray; */
 }
 
 .whole-container {
@@ -19,34 +20,49 @@ body {
 .main-container {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 100%;
   /* height: 35%; Set a fixed reduced height as needed */
   overflow: hidden;
+  /* justify-content: space-between; */
 }
 
 .form-section {
-  background-color: rgb(248, 225, 225);
+  background-color: rgb(255, 254, 254);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   height: 200px;
+  width: 35%;
+  margin: 2px;
   flex: 1; /* Makes both form sections take equal width */
 }
 .form-section1 {
   /* background-color:  rgb(238, 223, 223); */
-  background-color: rgb(248, 225, 225);
+  background-color: rgb(255, 254, 254);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   flex: 1;
+  width: 35%;
+  margin: 2px;
   overflow-y: auto;
   height: 200px; /* Match parent height */
 }
 
+.form-section3 {
+  background-color: rgb(255, 254, 254);
+  padding: 10px;
+  width: 20%;
+  border-radius: 10px;
+  margin: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  height: 200px;
+}
 .form-row {
   display: flex;
   flex-wrap: wrap;
@@ -81,17 +97,17 @@ body {
   padding: 5px;
   /* margin-bottom: 20px; */
 }
-.form-section2 {
+/* .form-section2 {
   height: 737px;
   width: 20%;
-  /* background-color:  rgb(238, 223, 223); */
+  background-color:  rgb(238, 223, 223);
   background-color: rgba(252, 184, 184, 0.63);
-  /* min-height: 100vh; */
+  min-height: 100vh;
   position: fixed;
   right: 0;
   top: 0;
   padding: 3px;
-}
+} */
 
 .form-section2-innerbutton {
   display: flex;
@@ -145,14 +161,17 @@ body {
   align-items: center;
   gap: 20px;
   padding: 15px;
-  background-color: rgb(245, 229, 229);
+  /* background-color: rgb(245, 229, 229); */
+  /* background-color: #1A4F8B; */
+  background-color: #3491fcab;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 80%;
+  width: 100%;
+  justify-content: space-between;
 }
 .ptag {
   font-weight: bold;
-  margin-left: 150px;
+  /* margin-left: 150px; */
 }
 .text {
   display: flex;
@@ -200,20 +219,20 @@ body {
 }
 
 .formsec {
-  background-color: rgb(238, 223, 223);
+  /* background-color: rgb(238, 223, 223); */
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   height: 40px;
-  width: 150px;
+  /* width: 150px; */
   flex-shrink: 0;
 }
 
-.form-pair {
+/* .form-pair {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -227,27 +246,33 @@ body {
 .form-pair input {
   width: 50px;
   padding: 5px;
-}
+} */
 
-.button-pair {
+/* .button-pair {
   display: flex;
   gap: 10px;
   flex-direction: row;
   align-items: center;
-}
+} */
 
-.button-pair button {
-  padding: 8px 10px;
-  background-color: skyblue;
+.button-pair1 {
+  padding: 10px 10px;
+  /* background-color: rgb(72, 98, 243); */
+  background-color: #a6f88d;
   border-radius: 8px;
   border: none;
+  width: 80px;
+}
+.button-pair1:hover {
+  background-color: #0a8a2a;
+  color: #ffffff;
 }
 .table-design {
   background-color: rgb(238, 238, 238);
 
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 80%;
+  width: 100%;
 
   margin-top: 5px;
   overflow-x: auto; /* prevent overflow breaking */
@@ -266,16 +291,17 @@ table {
 .highlighted-row td {
   border: 2px solid #f9f9f9; /* Clear border for 3D boundary */
   /* padding: 10px; */
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 .scroll-area {
-  width: 79%;
+  width: 100%;
   border: 2px solid #333; /* Border around the whole table container */
   height: 170px; /* Set a fixed height for scrolling */
   overflow: auto; /* Enables scroll bar */
-  padding: 5px;
-  margin-left: 10px;
+  /* padding: 5px; */
+  margin-left: 5px;
   margin-right: 10px;
+  background-color: #ffffff;
   overflow-x: auto; /* enables horizontal scroll */
   white-space: nowrap; /* prevents wrapping */
 }
@@ -300,43 +326,28 @@ table {
 .main-row {
   display: flex;
   gap: 10px;
-  width: 79.5%;
+  width: 100%;
   padding: 5px;
 }
 .vertical {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 15px;
-  background-color: rgb(149, 212, 219);
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 20%;
-}
-.vertics {
-  display: flex;
-  /* flex-direction: row; */
-  /* align-items: flex-start; */
-  justify-content: space-evenly;
-  gap: 10px;
-  padding: 15px;
-  background-color: rgb(149, 212, 219);
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 80%;
-}
 
-.verti {
-  /* display: flex; */
-  /* margin-left: 50px; */
-  /* flex-direction: column; */
-  /* gap: 5px; */
+  background-color: rgb(149, 212, 219);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 50%;
 }
-.vertics input,
-.vertical input {
+.vertical .checkbox {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  background-color: #a6f88d;
+  padding: 8px;
+}
+.vertical table {
   width: 50%;
   padding: 5px;
+  text-align: end;
 }
 
 .finalrow {
@@ -346,40 +357,27 @@ table {
   margin-right: 30px;
   margin-left: 5px;
   margin-top: 10px;
-
   border-radius: 4px; /* optional: to round corners slightly */
 }
-.checkbox {
-  height: 70px; /* height of the row */
-  display: flex; /* Enable Flexbox */
-  justify-content: space-between; /* Distribute space evenly */
-  align-items: center; /* Align items vertically in the center */
-  padding: 15px; /* Add padding for spacing */
-  background-color: rgb(238, 223, 223); /* Light gray background */
-  box-sizing: border-box; /* Include padding in width */
-}
 .check {
-  display: flex; /* Enable Flexbox for checkboxes */
-  gap: 10px;
-  /* justify-content: space-between; */
-  margin-right: 70px;
-}
-.form-group {
-  display: flex;
-  flex-direction: row; /* Stack label and input vertically */
-  flex: 1; /* Allow form groups to grow equally */
-  margin-left: 40px;
-  justify-content: space-between;
-}
-.form-group input {
-  width: 80%;
+  display: flex; 
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
+  
 }
 
-th,
-td,
-tr,
-table {
-  /* border: 1px solid black; */
+.form-group {
+  display: flex;
+  /* margin-left: 50px; */
+  margin-top: 5px;
+  flex-direction: column; /* Stack label and input vertically */
+  flex: 1; /* Allow form groups to grow equally */
+  /* margin-left: 40px; */
+  /* justify-content: space-between; */
+}
+.form-group input {
+  /* width: 80%; */
 }
 
 table input[type="text"] {
@@ -409,4 +407,49 @@ input[type="text"]:focus {
 
 .blue-bg {
   background-color: #d1e8ff !important;
+}
+/* .scroll-area {
+  width: 100%;
+  border: 2px solid #333;
+  height: 170px;
+  overflow: auto;
+  margin: 10px;
+} */
+
+.scroll-area table {
+  width: 100%;
+  border-collapse: collapse;
+  /* min-width: 800px; optional for horizontal scroll */
+}
+
+.scroll-area th,
+.scroll-area td {
+  border: 1px solid #999;
+  padding: 3px 3px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.scroll-area thead {
+  background-color: #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.iconsDiv {
+  width: 50%;
+  height: 130px;
+  background-color: #8fd1f1;
+}
+.iconsDiv button {
+  height: 50px;
+  width: 90px;
+  margin-top: 3px;
+  border-radius: 5px;
+  border: none;
+}
+.iconsDiv button:hover{
+  background-color: #368121;
+  color: #fff;
 }

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Waiter Registration</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakവ
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        font-family: Arial, sans-serif;
+        background-color: rgb(220, 239, 248);
+      }
+
+      .whole-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .form-container {
+        background-color: rgb(255, 254, 254);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-header {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        align-items: center;
+      }
+
+      .form-row label {
+        width: 150px;
+        font-weight: bold;
+        font-size: 14px;
+        color: #333;
+      }
+
+      .form-row input[type="text"],
+      .form-row input[type="tel"],
+      .form-row input[type="email"],
+      .form-row input[type="date"],
+      .form-row select {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        background-color: #f9f9f9;
+      }
+
+      .form-row input:focus,
+      .form-row select:focus {
+        outline: none;
+        background-color: #f0f8ff;
+        border-color: #a6f88d;
+      }
+
+      .form-row .small-input {
+        width: 150px;
+      }
+
+      .form-row .radio-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .form-row .radio-buttons input[type="radio"] {
+        display: none;
+      }
+
+      .form-row .radio-buttons label {
+        padding: 5px 15px;
+        background-color: #e0e0e0;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+
+      .form-row .radio-buttons input[type="radio"]:checked + label {
+        background-color: #a6f88d;
+        color: #fff;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .submit-btn,
+      .reset-btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .submit-btn {
+        background-color: #a6f88d;
+        color: #333;
+      }
+
+      .submit-btn:hover {
+        background-color: #0a8a2a;
+        color: #fff;
+      }
+
+      .reset-btn {
+        background-color: #e0e0e0;
+        color: #333;
+      }
+
+      .reset-btn:hover {
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="whole-container">
+      <div class="form-container">
+        <div class="form-header">Waiter Registration</div>
+        <div class="form-row">
+          <label>Full Name:</label>
+          <input type="text" placeholder="Enter full name" required />
+        </div>
+        <div class="form-row">
+          <label>Contact Number:</label>
+          <input type="tel" placeholder="Enter contact number" required />
+        </div>
+        <div class="form-row">
+          <label>Email ID:</label>
+          <input type="email" placeholder="Enter email address" />
+        </div>
+        <div class="form-row">
+          <label>Address:</label>
+          <input type="text" placeholder="Enter residential address" required />
+        </div>
+        <div class="form-row">
+          <label>Date of Joining:</label>
+          <input type="date" required />
+        </div>
+        <div class="form-row">
+          <label>Shift Preference:</label>
+          <div class="radio-buttons">
+            <input type="radio" id="morning" name="shift" value="morning" required />
+            <label for="morning">Morning</label>
+            <input type="radio" id="evening" name="shift" value="evening" />
+            <label for="evening">Evening</label>
+            <input type="radio" id="flexible" name="shift" value="flexible" />
+            <label for="flexible">Flexible</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <label>Branch:</label>
+          <select required>
+            <option value="" disabled selected>Select branch</option>
+            <option value="branch1">Branch 1</option>
+            <option value="branch2">Branch 2</option>
+            <option value="branch3">Branch 3</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Experience Level:</label>
+          <div class="radio-buttons">
+            <input type="radio" id="entry" name="experience" value="entry" required />
+            <label for="entry">Entry Level</label>
+            <input type="radio" id="intermediate" name="experience" value="intermediate" />
+            <label for="intermediate">Intermediate</label>
+            <input type="radio" id="senior" name="experience" value="senior" />
+            <label for="senior">Senior</label>
+          </div>
+        </div>
+        <div class="button-container">
+          <button class="submit-btn"><i class="fa-solid fa-floppy-disk"></i> Register</button>
+          <button class="reset-btn"><i class="fa-solid fa-arrow-rotate-right"></i> Reset</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
